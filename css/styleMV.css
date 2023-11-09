@@ -1,9 +1,10 @@
 #navbar{
-    background-color: #F50B40;
+    background-color: #a00f31;
 }
 
 #navbar a{
     color: white;
+    font-size: 20px;
 }
 
 body{
