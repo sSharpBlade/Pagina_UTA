@@ -5,3 +5,30 @@
 #navbar a{
     color: white;
 }
+
+.imagen-carrusel{
+    width: 1280px;
+    height: 720px;
+    object-fit: cover;
+}
+
+/* Estilo para la imagen inicial a pantalla completa */
+.fullscreen-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Coloca la imagen por encima del resto del contenido */
+}
+.fullscreen-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para ocultar el contenido hasta que el usuario haga scroll */
+.container {
+    display: none;
+}
