@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 #navbar {
     background-color: #F50B40;
 }
@@ -38,4 +40,9 @@
 .card:hover{
     transform: scale(0.9);
     box-shadow: 0px 0px 10px #C70833;
+}
+
+h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
 }
