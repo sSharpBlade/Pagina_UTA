@@ -6,7 +6,60 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+    </style>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleBienestarUniversitario.css">
+    <link rel="stylesheet" href="tablaDinamica.js">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function cambiarContenido(imagenSrc, imagenAlt, tablaContenido) {
+            // Cambiar la imagen
+            var imagen = '<img src="' + imagenSrc + '" alt="' + imagenAlt + '" class="img-fluid">';
+            // Cambiar el contenido de la tabla
+            var tabla = '<table class="table">';
+            tabla += '<thead>';
+            tabla += '<tr>';
+            for (var i = 0; i < tablaContenido[0].length; i++) {
+                tabla += '<th scope="col">' + tablaContenido[0][i] + '</th>';
+            }
+            tabla += '</tr>';
+            tabla += '</thead>';
+            tabla += '<tbody>';
+            for (var i = 1; i < tablaContenido.length; i++) {
+                tabla += '<tr>';
+                for (var j = 0; j < tablaContenido[i].length; j++) {
+                    tabla += '<td>' + tablaContenido[i][j] + '</td>';
+                }
+                tabla += '</tr>';
+            }
+            tabla += '</tbody>';
+            tabla += '</table>';
+
+            // Actualizar la tabla
+            $('#container').html(imagen + tabla);
+        }
+
+        $(document).ready(function () {
+            // Asignar la función a cada botón
+            $('.boton-custom').each(function (index) {
+                $(this).click(function () {
+                    // Personaliza estos valores según tus necesidades
+                    var imagenSrc = 'NUEVA_RUTA_DE_LA_IMAGEN';
+                    var imagenAlt = 'NUEVO_TEXTO_ALT';
+                    var tablaContenido = [
+                        ['#', 'First', 'Last', 'Handle'],
+                        [1, 'Nuevo', 'Contenido', '@example'],
+                        [2, 'Otro', 'Contenido', '@test'],
+                        [3, 'Más', 'Contenido', '@sample']
+                    ];
+
+                    cambiarContenido(imagenSrc, imagenAlt, tablaContenido);
+                });
+            });
+        });
+    </script>
     <title>Inicio</title>
 </head>
 
@@ -84,6 +137,10 @@
                         <a class="nav-link" href="#">Transparencia</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bienestar Universitario</a>
+                    </li>
+
                 </ul>
             </div>
 
@@ -91,8 +148,11 @@
 
     </nav>
 
-   
-    <div class="contenedor-botones mt-4">
+
+    <h1>BIENESTAR UNIVERSITARIO</h1>
+
+    <div class="contenedor-botones mt-4" role="group" aria-label="Basic example">
+
         <button type="button" class="btn btn-light boton-custom">Salud Integral</button>
         <button type="button" class="btn btn-light boton-custom">Educación para la Salud</button>
         <button type="button" class="btn btn-light boton-custom">Centro de Desarrollo Infantil</button>
@@ -100,10 +160,44 @@
         <button type="button" class="btn btn-light boton-custom">Consejería y Orientación</button>
     </div>
 
-  
+
+    <div id="container" class="container">
+        <!-- Contenido inicial -->
+        <img src="img/directoradadoamor.webp" alt="Tu Imagen" class="img-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div class="contenedor d-flex flex-wrap justify-content-center">
         <!-- Primera fila -->
+        <h1>Otras Funciones</h1>
         <div class="row mb-4">
             <div class="col-md-4">
                 <a href="#">
@@ -142,49 +236,17 @@
             </div>
         </div>
 
-        <!-- Segunda fila -->
-        <div class="row">
-            <div class="col-md-6">
-                <a href="#">
-                    <figure class="text-center">
-                        <img src="img/centro cultural.webp" class="img-fluid">
-                        <div class="capa">
-                            <h3>Título de la Imagen 4</h3>
-                            <p>Descripción de la Imagen 4</p>
-                        </div>
-                    </figure>
-                </a>
-            </div>
 
-            <div class="col-md-6">
-                <a href="#">
-                    <figure class="text-center">
-                        <img src="img/SAIC.webp" class="img-fluid">
-                        <div class="capa">
-                            <h3>Título de la Imagen 5</h3>
-                            <p>Descripción de la Imagen 5</p>
-                        </div>
-                    </figure>
-                </a>
-            </div>
-        </div>
-    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 
 
-
-    <div class="imagenPrincipal d-flex justify-content-center align-items-center vh-100">
-        <img src="img/directoradadoamor.webp" alt="">
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
 </body>
 
 <footer class="text-center py-5">
     &copysr;UTA -Equipo Alfa Buena Maravilla Onda Dinamita Escuadrón Lobo
 
-   </footer>
+</footer>
 
 </html>
