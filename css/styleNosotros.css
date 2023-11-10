@@ -42,9 +42,10 @@ h5{
   text-shadow: 2px 2px 5px rgba(255, 255, 255, 2.5);
 }
 .card-img-top {
-    width: 400px; 
+    width: 300px; 
     height: 300px;
     overflow: hidden;
+    margin: 0 auto;
 }
 #playButton1 {
   font-family: 'Leckerli One', cursive;
