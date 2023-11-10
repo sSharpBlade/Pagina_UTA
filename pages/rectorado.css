@@ -1,8 +1,11 @@
  h2 {
-    color:blueviolet; 
+    color:black; 
     font-size: 30pt; 
     text-align: center;
     margin-bottom: 25pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: rgb(237, 136, 131);
 
 }
 
@@ -15,7 +18,7 @@
 }
 
 .card-body i {
-font-size: 4rem;
+font-size: 3.5rem;
 color: black;
 }
 
@@ -34,6 +37,46 @@ color: black;
 .card-body{
     background-color: rgb(232, 226, 226);
 }
+
+.cargo{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.modal-text {
+    color: black;
+    margin-top: 20px;    
+    margin-right: 25px;   
+    margin-bottom: 10px; 
+    margin-left: 25px;
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+
+.accordion-body {
+    color:black;
+    font-family: 'Noto Sans KR', sans-serif; 
+    text-align: justify;
+    background-color: rgb(232, 226, 226);
+}
+
+.accordion-button {
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+} 
+
+.negrita {
+    font-weight: bold;
+}
+
+.modal-header {
+    background-color: rgb(208, 91, 91);
+}
+
+.accordion-button i {
+    font-size: 2rem;;
+}
+
 
 
 
