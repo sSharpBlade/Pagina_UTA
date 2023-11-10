@@ -5,3 +5,34 @@
 #navbar a{
     color: white;
 }
+
+h1 {
+    font-size: 36px; 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+}
+
+.container {
+    border: 2px solid black;
+    border-radius: 12px; /* Border radius aumentado para un aspecto más redondeado */
+    padding: 20px; /* Espaciado interno para el contenedor principal */
+}
+
+
+.contenedor-con-contorno img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    opacity: 0.8;
+  
+   
+}
+
+.contenedor-con-contorno img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.texto-bajo-imagen {
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+}
