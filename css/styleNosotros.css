@@ -1,9 +1,82 @@
 #navbar{
     background-color: #a00f31;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 #navbar a{
     color: white;
 }
+.nosotros{
+  text-align: justify;
+  line-height: 2em;
+}
+h2{
+  font-family: 'Leckerli One', cursive;
+  font-family: 'Permanent Marker', cursive;
+  color: #8b0021;
+  text-shadow: 2px 2px 5px #888888;
+  font-size: 60px;
+}
 
+.carousel-item {
+    width: 1550px;
+    height: 500px; 
+    overflow: hidden;
+  }
+  .img-fluid {
+    width: 100%; /* Asegura que la imagen llene el contenedor */
+    height: auto;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto; 
+  }
+  .carousel-item.active {
+  position: relative;
+}
+h5{
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 80px;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 2.5);
+}
+.card-img-top {
+    width: 400px; 
+    height: 300px;
+    overflow: hidden;
+}
+#playButton1 {
+  font-family: 'Leckerli One', cursive;
+  font-size: 15px;
+  background-color: rgb(99, 0, 0); 
+  color: #fff; 
+  border: none; 
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+#playButton1:hover {
+  background-color: #b74b4b; 
+}
+#playButton2 {
+  font-family: 'Leckerli One', cursive;
+  font-size: 15px;
+  background-color: rgb(99, 0, 0); 
+  color: #fff; 
+  border: none; 
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+#playButton2:hover {
+  background-color: #b74b4b; 
+}
+p{
+  font-family: 'Acme', sans-serif;
+}
