@@ -32,9 +32,9 @@
                   Centro de Posgrados
                 </a>
                 <ul class="dropdown-menu bg-danger dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="MisionVisionPosgrado.html">Misión - Visión Centro de Posgrados</a></li>
-                  <li><a class="dropdown-item" href="directorPosgrado.html">Director Centro de Posgrados</a></li>
-                  <li><a class="dropdown-item" href="contactoPosgrado.html">Directorio de Contactos</a></li>
+                  <li><a class="dropdown-item" href="/pages/MisionVisionPosgrado.html">Misión - Visión Centro de Posgrados</a></li>
+                  <li><a class="dropdown-item" href="#">Director Centro de Posgrados</a></li>
+                  <li><a class="dropdown-item" href="#">Directorio de Contactos</a></li>
                 </ul>
               </li>
 
@@ -77,27 +77,127 @@
     </div>
 
     <div class="text-center">
-      
-      <h2 style="padding-top: 15;"></h2>
-
-
-      <div class="row row-cols-1 row-cols-md-1 g-4 px-5"  id="cardRow">
-        <div class="col">
-          <div class="card cardwhite">
-            <h2 class="card-header" style="background-color: #a00f31; color: white;">RESEÑA</h2>
-            <div class="card-body">
-                <h5 class="card-title">Mision - Vision Centro de Posgrados</h5>
-                <p class="card-text" style="text-align: justify;">Una clara visión de la Universidad que deseamos para el futuro es la línea de liderazgo indispensable para determinar las acciones y proyectos que se deben fortalecer, así como aquellos que se deben iniciar para avanzar con rapidez y solidez en esa dirección. En el corto plazo es posible observar algunos resultados, pero la mayoría de ellos servirán como plataforma para algunos proyectos a futuro, los proyectos que deben emprenderse no son los que den frutos inmediatos sino los que contribuyan en mayor medida a la consolidación que la universidad demanda. El sistema de Posgrado de la UTA debe consolidarse como uno de los mejores del país en términos de calidad, diversidad y respuesta a los requerimientos del sistema de Educación Superior y de los sectores productivo, social y gubernamental.</p>
-                <p class="card-text" style="text-align: justify;">Un sistema que mediante un crecimiento sostenido permita establecer programas de maestría en todas las unidades académicas de la Universidad, programas de doctorado de cuarto nivel que permitan formar doctores que necesitan las Instituciones de Nivel Superior, un sistema de posgrado flexible en que tanto estudiantes como docentes puedan acceder a toda la riqueza y variedad de programas que ofrezca la institución con calidad, y excelencia. Este sistema debe integrar los esfuerzos de las Unidades Académicas y asegurar el uso pleno de la infraestructura universitaria, así como también garantizar la participación de los mejores académicos de la universidad.</p>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <a href="MisionVisionPosgrado.html" class="btn btn-outline-dark">Reseña</a>
-                    <a href="directorPosgrado.html" class="btn btn-outline-dark">Director</a>
-                    <a href="contactoPosgrado.html" class="btn btn-outline-dark">Contactos</a>
-                  </div>
-              </div>
-
+      <div class="container-fluid">
+        <div class="col-md-4 mx-auto p-3">
+          <div class="input-group">
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Escribe para buscar...">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon2">
+                <img src="../img/buscar.png" alt="Search Icon" style="width: 25px; height: 25px;"> <!-- Ajusta el tamaño según tus preferencias -->
+              </span>
+            </div>
           </div>
         </div>
+      </div>
+      <h2>Posgrados</h2>
+      <div class="btn-group p-3" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-dark" for="btnradio1">1</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-dark" for="btnradio2">2</label>
+      </div>
+      
+
+      <div class="row row-cols-1 row-cols-md-3 g-4 px-5"  id="cardRow">
+        <div class="col">
+          <div class="card cardwhite">
+            <img src="../img/imgMaestrias/maestriaLinguistica.png" class="card-img-top w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN LINGÜÍSTICA</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../img/imgMaestrias/maestriaGestionAmbiental.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN GESTIÓN AMBIENTAL</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../img/imgMaestrias/maTecInfo.png" class="card-img-top " alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN TECNOLOGÍAS DE LA INFORMACIÓN</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/imgMaestrias/maLit3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN LITERATURA</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../img/imgMaestrias/maEneRen.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN ENERGÍAS RENOVABLES</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/imgMaestrias/maMercadoT.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN MERCADOTECNIA</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/imgMaestrias/maGerencia.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN GERENCIA DE LA CALIDAD E INNOVACIÓN</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/imgMaestrias/maDirecEmp2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN DIRECCIÓN DE EMPRESAS</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../img/imgMaestrias/maTec.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN AUDITORÍA DE TECNOLOGÍAS DE LA INFORMACIÓN</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="../img/imgMaestrias/maProElec2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN SISTEMAS DE PROPULSIÓN ELÉCTRICA</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/imgMaestrias/maComu2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN COMUNICACIÓN</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="../img/imgMaestrias/maGesPro2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MAESTRÍA EN GESTIÓN DE PROYECTOS</h5>
+            </div>
+          </div>
+        </div>
+
+
       </div>
 
     </div>
