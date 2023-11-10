@@ -1,3 +1,11 @@
+#navbar{
+    background-color: #a00f31;
+}
+
+#navbar a{
+    color: white;
+}
+
  h2 {
     color:black; 
     font-size: 30pt; 
