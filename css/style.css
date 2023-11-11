@@ -55,13 +55,16 @@ h2 {
     width: auto;
 }
 .card-img-topa {
-    /* Establecer el tamaño específico para dispositivos de escritorio */
     width: 350px;
-    height: auto; /* Altura automática para mantener la proporción original */
+    height: auto; 
 }
 @media (max-width: 768px) {
     .card-img-topa {
         /* Hacer la imagen responsive en dispositivos móviles */
         width: 100%;
     }
+}
+.card.no-hover:hover {
+    transform: scale(1);
+    
 }
