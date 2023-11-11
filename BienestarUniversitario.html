@@ -42,23 +42,82 @@
         }
 
         $(document).ready(function () {
-            // Asignar la función a cada botón
-            $('.boton-custom').each(function (index) {
+
+            $('.boton-custom').each(function () {
                 $(this).click(function () {
-                    // Personaliza estos valores según tus necesidades
-                    var imagenSrc = 'NUEVA_RUTA_DE_LA_IMAGEN';
-                    var imagenAlt = 'NUEVO_TEXTO_ALT';
-                    var tablaContenido = [
-                        ['#', 'First', 'Last', 'Handle'],
-                        [1, 'Nuevo', 'Contenido', '@example'],
-                        [2, 'Otro', 'Contenido', '@test'],
-                        [3, 'Más', 'Contenido', '@sample']
-                    ];
+
+                    var imagenSrc = $(this).data('imagen-src');
+                    var imagenAlt = $(this).data('imagen-alt');
+                    var tablaContenidoId = $(this).data('tabla-contenido');
+
+
+                    var tablaContenido;
+                    switch (tablaContenidoId) {
+                        case 'saludIntegral':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Karla Vaca', 'Psicóloga', 'kg.vaca@uta.edu.ec'],
+                                [2, 'Gabriela Cruz', 'Psicóloga', 'ga.cruz@uta.edu.ec'],
+                                [3, 'Andrea Grijalva', 'Psicóloga', 'ac.grijalva@uta.edu.ec'],
+                                [4, 'Rosario Muñoz', 'Psicóloga', 'ri.muñoz@uta.edu.ec'],
+                                [5, 'Verónica Lozada', 'Licenciada', 'va.lozada@uta.edu.ec']
+
+                            ];
+                            break;
+                        case 'EducacionParaLaSalud':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Iván Huilcapi', 'Licenciado', 'ip.huilcapi@uta.edu.ec'],
+                                [2, 'David Robalino', 'Licenciado', 'id.robalino@uta.edu.ec'],
+                                [3, 'Carlos Villacrés', 'Licenciado', 'cp.villacres@uta.edu.ec'],
+                                [4, 'Juan Pablo Carrera', 'Licenciado', 'p.carrera@uta.edu.ec']
+
+                            ];
+                            break;
+
+
+                        case 'centroDeDesarrolloInfantil':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Tatiana Villacís', 'Licenciada', 'ip.mt.villacis@uta.edu.ec'],
+                                [2, 'Paulina Chaquinga', 'Licenciada', 'pa.chaquinga@uta.edu.ec'],
+                                [3, 'Samanta Córdova', 'Licenciada', 'gs.cordova@uta.edu.ec'],
+                                [4, 'Sonia Hidalgo', 'Licenciada', 'sp.hidalgo@uta.edu.ec'],
+                                [5, 'Erika Gamboa', 'Licenciada', 'em.gamboa@uta.edu.ec']
+
+                            ];
+                            break;
+
+                        case 'programaDeBecas':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Anita Torres', 'N.D', 'al.torres@uta.edu.ec'],
+                                [2, 'Lilia Sánchez', 'Licenciada', 'lc.sanchez@uta.edu.ec']
+
+                            ];
+                            break;
+
+                        case 'consejeriaOrientacion':
+                            tablaContenido = [
+                                ['#', 'Nombre', 'Objetivo'],
+                                [1, 'Servicios Asistenciales', 'Este proyecto está encaminado a captar la casuística universitaria de cada facultad de la Universidad Técnica de Ambato, para ello se insertarán estudiantes que realizan prácticas preprofesionales de las carreras de Trabajo social, Psicológia Clínica,Psicológia Educativa, con el fin de que haya el reporte de docentes y estudiantes de cada facultad a la Unidad derivación de casos'],
+                                [2, 'Sin Límites', 'Este proyecto va encaminado a la inserción de cada estudiante que presente algún tipo de necesidad Educativa especial o discapacidad en el ámbito universitario y social; haciendo efectiva de ésta manera la inclusión.'],
+                                [3, 'Libre de Violencia', 'Proyecto direccionado a afianzar el respeto a los derechos y a la integridad física, psicológica y sexual de las y los estudiantes, en un ambiente libre de violencia aplicando información, educación y comunicación; se contará con el apoyo de la oficina jurídica de la Facultad de Jurisprudencia de la Universidad Técnica de Ambato para la asesoría legal, según fuese el caso.'],
+                                [4, 'Sauld Mental y Drogas', 'Proyecto encaminado a informar, educar y comunicar la prevención y atención integral en adicciones y salud mental en la comunidad universitaria. Además se trabaja una vez por semana por el lapso de dos horas un focus group.'],
+                                [5, 'Manejo de Conflictos', 'Proyecto que se encarga de proporcionar técnicas para la toma de decisiones y solución de problemas y conflictos en la comunidad universitaria. Se captan los casos reportados por las USA, por el Programa de Salud integral, o por cualquier miembro de la comunidad universitaria.'],
+                                [6, 'Orientacion Profesional y Vocacional', 'Proyecto que propone el proyecto de vida y la innovación universitaria de cada orientación que se pueda brindar. Se captan los casos reportados por las USA, por el Programa de Salud integral, o por cualquier miembro de la comunidad universitaria.']
+
+                            ];
+                            break;
+
+                    }
+
 
                     cambiarContenido(imagenSrc, imagenAlt, tablaContenido);
                 });
             });
         });
+
     </script>
     <title>Inicio</title>
 </head>
@@ -138,7 +197,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bienestar Universitario</a>
+                        <a class="nav-link" href="BienestarUniversitario.html">Bienestar Universitario</a>
                     </li>
 
                 </ul>
@@ -153,11 +212,82 @@
 
     <div class="contenedor-botones mt-4" role="group" aria-label="Basic example">
 
-        <button type="button" class="btn btn-light boton-custom">Salud Integral</button>
-        <button type="button" class="btn btn-light boton-custom">Educación para la Salud</button>
-        <button type="button" class="btn btn-light boton-custom">Centro de Desarrollo Infantil</button>
-        <button type="button" class="btn btn-light boton-custom">Programa de Becas y Acreditación</button>
-        <button type="button" class="btn btn-light boton-custom">Consejería y Orientación</button>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Salud Integral
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/psc-Educativa.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="saludIntegral">Psicología Educativa</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/psc-Clinica.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="saludIntegral">Psicología Clínica</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/atencionsocial.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="saludIntegral">Trabajo Social</button>
+
+        </ul>
+
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Educación para la Salud
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom"
+                data-imagen-src="img/Area-educacion-para-la-salud.webp" data-imagen-alt="Texto Alt para beca"
+                data-tabla-contenido="EducacionParaLaSalud">Plan Preventivo para la Salud</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/actividades-recreativas.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="EducacionParaLaSalud">Actividades
+                Recreativas</button>
+
+        </ul>
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Centro de Desarrollo Infantil
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/CDI1.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="centroDeDesarrolloInfantil">CDI
+                Docentes</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/CDI2.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="centroDeDesarrolloInfantil">CDI Docentes
+                2</button>
+
+        </ul>
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Programa de Becas y Acreditación
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/social.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="programaDeBecas">Programa de
+                Becas</button>
+
+
+        </ul>
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Consejería y Orientación
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="img/consejeria.jpg"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="consejeriaOrientacion">Consejería y
+                Orientación</button>
+
+
+        </ul>
+
     </div>
 
 
@@ -168,29 +298,19 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Miembro</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Correo electrónico</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>Sara Guadalupe</td>
+                    <td>Psicóloga</td>
+                    <td>saravguadalupe@uta.edu.ec</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+
             </tbody>
         </table>
     </div>
