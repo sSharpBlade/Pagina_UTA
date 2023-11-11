@@ -6,17 +6,17 @@
     align-items: center;
 }
 
-/* Estilo para la imagen */
+
 #container img {
-    max-width: 45%; /* Ajusta según sea necesario */
-    margin-right: 10px; /* Ajusta según sea necesario */
+    max-width: 45%; 
+    margin-right: 10px; 
     width: 700px;
     height: 600px;
 }
 
-/* Estilo para la tabla */
+
 #container table {
-    max-width: 50%; /* Ajusta según sea necesario */
+    max-width: 50%; 
 }
 
 h1{
@@ -27,11 +27,10 @@ h1{
 }
 .container {
     border: 2px solid black;
-    border-radius: 12px; /* Border radius aumentado para un aspecto más redondeado */
-    padding: 20px; /* Espaciado interno para el contenedor principal */
+    border-radius: 12px;
+    padding: 20px; 
    
 }
-
 
 
 .contenedor-flex {
@@ -141,11 +140,11 @@ h1{
     .custom-container img {
         max-width: 100%;
         height: auto;
-        margin-right: 15px; /* Espacio entre la imagen y la tabla */
+        margin-right: 15px;
     }
 
     .custom-container table {
         width: 100%;
-        margin-bottom: 15px; /* Espacio entre la tabla y la imagen */
+        margin-bottom: 15px; 
     }
     
