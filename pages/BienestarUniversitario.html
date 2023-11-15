@@ -1,0 +1,367 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleBienestarUniversitario.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function cambiarContenido(imagenSrc, imagenAlt, tablaContenido) {
+            // Cambiar la imagen
+            var imagen = '<img src="' + imagenSrc + '" alt="' + imagenAlt + '" class="img-fluid">';
+            // Cambiar el contenido de la tabla
+            var tabla = '<table class="table">';
+            tabla += '<thead>';
+            tabla += '<tr>';
+            for (var i = 0; i < tablaContenido[0].length; i++) {
+                tabla += '<th scope="col">' + tablaContenido[0][i] + '</th>';
+            }
+            tabla += '</tr>';
+            tabla += '</thead>';
+            tabla += '<tbody>';
+            for (var i = 1; i < tablaContenido.length; i++) {
+                tabla += '<tr>';
+                for (var j = 0; j < tablaContenido[i].length; j++) {
+                    tabla += '<td>' + tablaContenido[i][j] + '</td>';
+                }
+                tabla += '</tr>';
+            }
+            tabla += '</tbody>';
+            tabla += '</table>';
+
+            // Actualizar la tabla
+            $('#container').html(imagen + tabla);
+        }
+
+        $(document).ready(function () {
+
+            $('.boton-custom').each(function () {
+                $(this).click(function () {
+
+                    var imagenSrc = $(this).data('imagen-src');
+                    var imagenAlt = $(this).data('imagen-alt');
+                    var tablaContenidoId = $(this).data('tabla-contenido');
+
+
+                    var tablaContenido;
+                    switch (tablaContenidoId) {
+                        case 'saludIntegral':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Karla Vaca', 'Psicóloga', 'kg.vaca@uta.edu.ec'],
+                                [2, 'Gabriela Cruz', 'Psicóloga', 'ga.cruz@uta.edu.ec'],
+                                [3, 'Andrea Grijalva', 'Psicóloga', 'ac.grijalva@uta.edu.ec'],
+                                [4, 'Rosario Muñoz', 'Psicóloga', 'ri.muñoz@uta.edu.ec'],
+                                [5, 'Verónica Lozada', 'Licenciada', 'va.lozada@uta.edu.ec']
+
+                            ];
+                            break;
+                        case 'EducacionParaLaSalud':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Iván Huilcapi', 'Licenciado', 'ip.huilcapi@uta.edu.ec'],
+                                [2, 'David Robalino', 'Licenciado', 'id.robalino@uta.edu.ec'],
+                                [3, 'Carlos Villacrés', 'Licenciado', 'cp.villacres@uta.edu.ec'],
+                                [4, 'Juan Pablo Carrera', 'Licenciado', 'p.carrera@uta.edu.ec']
+
+                            ];
+                            break;
+
+
+                        case 'centroDeDesarrolloInfantil':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Tatiana Villacís', 'Licenciada', 'ip.mt.villacis@uta.edu.ec'],
+                                [2, 'Paulina Chaquinga', 'Licenciada', 'pa.chaquinga@uta.edu.ec'],
+                                [3, 'Samanta Córdova', 'Licenciada', 'gs.cordova@uta.edu.ec'],
+                                [4, 'Sonia Hidalgo', 'Licenciada', 'sp.hidalgo@uta.edu.ec'],
+                                [5, 'Erika Gamboa', 'Licenciada', 'em.gamboa@uta.edu.ec']
+
+                            ];
+                            break;
+
+                        case 'programaDeBecas':
+                            tablaContenido = [
+                                ['#', 'Miembro', 'Título', 'Correo electrónico'],
+                                [1, 'Anita Torres', 'N.D', 'al.torres@uta.edu.ec'],
+                                [2, 'Lilia Sánchez', 'Licenciada', 'lc.sanchez@uta.edu.ec']
+
+                            ];
+                            break;
+
+                        case 'consejeriaOrientacion':
+                            tablaContenido = [
+                                ['#', 'Nombre', 'Objetivo'],
+                                [1, 'Servicios Asistenciales', 'Este proyecto está encaminado a captar la casuística universitaria de cada facultad de la Universidad Técnica de Ambato, para ello se insertarán estudiantes que realizan prácticas preprofesionales de las carreras de Trabajo social, Psicológia Clínica,Psicológia Educativa, con el fin de que haya el reporte de docentes y estudiantes de cada facultad a la Unidad derivación de casos'],
+                                [2, 'Sin Límites', 'Este proyecto va encaminado a la inserción de cada estudiante que presente algún tipo de necesidad Educativa especial o discapacidad en el ámbito universitario y social; haciendo efectiva de ésta manera la inclusión.'],
+                                [3, 'Libre de Violencia', 'Proyecto direccionado a afianzar el respeto a los derechos y a la integridad física, psicológica y sexual de las y los estudiantes, en un ambiente libre de violencia aplicando información, educación y comunicación; se contará con el apoyo de la oficina jurídica de la Facultad de Jurisprudencia de la Universidad Técnica de Ambato para la asesoría legal, según fuese el caso.'],
+                                [4, 'Sauld Mental y Drogas', 'Proyecto encaminado a informar, educar y comunicar la prevención y atención integral en adicciones y salud mental en la comunidad universitaria. Además se trabaja una vez por semana por el lapso de dos horas un focus group.'],
+                                [5, 'Manejo de Conflictos', 'Proyecto que se encarga de proporcionar técnicas para la toma de decisiones y solución de problemas y conflictos en la comunidad universitaria. Se captan los casos reportados por las USA, por el Programa de Salud integral, o por cualquier miembro de la comunidad universitaria.'],
+                                [6, 'Orientacion Profesional y Vocacional', 'Proyecto que propone el proyecto de vida y la innovación universitaria de cada orientación que se pueda brindar. Se captan los casos reportados por las USA, por el Programa de Salud integral, o por cualquier miembro de la comunidad universitaria.']
+
+                            ];
+                            break;
+
+                    }
+
+
+                    cambiarContenido(imagenSrc, imagenAlt, tablaContenido);
+                });
+            });
+        });
+
+    </script>
+    <title>Bienestar Universitario</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/favicon.svg" alt="Bootstrap" height="60">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto px-3">
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu bg-danger dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="https://login.microsoftonline.com/" target="_BLANK">Correo
+                      Institucional</a></li>
+                  <li><a class="dropdown-item" href="./buses.html">Ruta de Buses</a></li>
+                  <li><a class="dropdown-item"
+                      href="https://servicios.uta.edu.ec/SistemaIntegrado/Cuenta/Login?ReturnUrl=%2fSistemaIntegrado%2fdefault"
+                      target="_blank">Sistema Integrado</a></li>
+                  <li><a class="dropdown-item" href="./calendario.html">Calendario Académico</a></li>
+                  <li><a class="dropdown-item" href="https://elibro.net/es/lc/uta/login_usuario/?next=/es/lc/uta/inicio/"
+                      target="_blank">Biblioteca Virtual</a></li>
+                  <li><a class="dropdown-item" href="./prensa.html">Sala de Prensa</a></li>
+                  <li><a class="dropdown-item" href="https://servicios.uta.edu.ec/seguimientograduadosest/Inicio/Login"
+                      target="_blank">Bolsa de Empleo</a></li>
+                </ul>
+              </li>
+    
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gestión
+                </a>
+                <ul class="dropdown-menu bg-danger dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="./rectorado.html">Rectorado</a></li>
+                  <li><a class="dropdown-item" href="./viceAcademico.html">Vicerrectorado Académico</a></li>
+                  <li><a class="dropdown-item" href="./viceInvestigacion.html">Vicerrectorado de Investigación</a>
+                  </li>
+                  <li><a class="dropdown-item" href="./viceAdministrativo.html">Vicerrectorado Administrativo</a></li>
+                </ul>
+              </li>
+    
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Posgrados
+                </a>
+                <ul class="dropdown-menu bg-danger dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="./sitioPosgrado.html">Sitio Web</a></li>
+                  <li><a class="dropdown-item" href="./comoPostular.html">Postulaciones</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="./misionVision.html">Mision - Vision</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="./BienestarUniversitario.html">Bienestar Universitario</a>
+              </li>
+    
+    
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+
+    <h1 style="margin-top: 100px;">BIENESTAR UNIVERSITARIO</h1>
+
+    <div class="contenedor-botones mt-4" role="group" aria-label="Basic example">
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Salud Integral
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/psc-Educativa.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="saludIntegral">Psicología Educativa</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/psc-Clinica.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="saludIntegral">Psicología Clínica</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/atencionsocial.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="saludIntegral">Trabajo Social</button>
+
+        </ul>
+
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Educación para la Salud
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom"
+                data-imagen-src="../img/Area-educacion-para-la-salud.webp" data-imagen-alt="Texto Alt para beca"
+                data-tabla-contenido="EducacionParaLaSalud">Plan Preventivo para la Salud</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/actividades-recreativas.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="EducacionParaLaSalud">Actividades
+                Recreativas</button>
+
+        </ul>
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Centro de Desarrollo Infantil
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/CDI1.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="centroDeDesarrolloInfantil">CDI
+                Docentes</button>
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/CDI2.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="centroDeDesarrolloInfantil">CDI Docentes
+                2</button>
+
+        </ul>
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Programa de Becas y Acreditación
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/social.webp"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="programaDeBecas">Programa de
+                Becas</button>
+
+
+        </ul>
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Consejería y Orientación
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+            <button type="button" class="btn btn-light boton-custom" data-imagen-src="../img/consejeria.jpg"
+                data-imagen-alt="Texto Alt para beca" data-tabla-contenido="consejeriaOrientacion">Consejería y
+                Orientación</button>
+
+
+        </ul>
+
+    </div>
+
+
+    <div id="container" class="container">
+        <!-- Contenido inicial -->
+        <img src="../img/directoradadoamor.webp" alt="Tu Imagen" class="img-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Miembro</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Correo electrónico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Sara Guadalupe</td>
+                    <td>Psicóloga</td>
+                    <td>saravguadalupe@uta.edu.ec</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="contenedor d-flex flex-wrap justify-content-center">
+        <!-- Primera fila -->
+        <h1>Otras Funciones</h1>
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <a href="https://biblioteca.uta.edu.ec">
+                    <figure class="text-center">
+                        <img src="../img/biblioteca.webp" class="img-fluid">
+                        <div class="capa">
+                            <h3>Biblioteca Universitaria</h3>
+                            <p>Acceso a repositorio de miles de libros autorizados</p>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="https://siuta.uta.edu.ec/procesos/app_PLogin/">
+                    <figure class="text-center">
+                        <img src="../img/SAIC.webp" class="img-fluid">
+                        <div class="capa">
+                            <h3>Sistema del Aseguramiento Interno de la Calidad</h3>
+                            <p>Orientado a promover y fortalecer el desarrollo de una cultura de excelencia
+                                dentro de la estructura y los procedimientos de la Institución en busca de la mejora
+                                continua.</p>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a href="https://cultura.uta.edu.ec/v4.0/">
+                    <figure class="text-center">
+                        <img src="../img/centro cultural.webp" class="img-fluid">
+                        <div class="capa">
+                            <h3>Centro Cultural</h3>
+                            <p>Promueve las actividades culturales y artísticas universitarias para la difusión del
+                                Centro CUltural Universitario de la Universidad Técnica de Ambato</p>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+
+</body>
+
+<footer class="text-center py-5">
+    &copysr;UTA -Equipo Alfa Buena Maravilla Onda Dinamita Escuadrón Lobo
+
+</footer>
+
+</html>

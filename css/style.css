@@ -54,3 +54,17 @@ h2 {
 .eventos {
     width: auto;
 }
+.card-img-topa {
+    width: 350px;
+    height: auto; 
+}
+@media (max-width: 768px) {
+    .card-img-topa {
+        /* Hacer la imagen responsive en dispositivos móviles */
+        width: 100%;
+    }
+}
+.card.no-hover:hover {
+    transform: scale(1);
+    
+}
